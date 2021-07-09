@@ -30,7 +30,7 @@ services:
         - traefik.port=9090
         - traefik.frontend.rule=Host:prometheus.4labs.example
         - traefik.backend=prometheus
-        - traefik.docker.network=traefik_net
+        - traefik.docker.network=traefik-net
       placement:
         constraints: [node.role == manager]
 
@@ -96,6 +96,6 @@ services:
         - traefik.port=3000
         - traefik.frontend.rule=Host:grafana.4labs.example
         - traefik.backend=grafana
-        - traefik.docker.network=traefik_net
+        - traefik.docker.network=traefik-net
       placement:
         constraints: [node.role == manager]
